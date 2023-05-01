@@ -1,0 +1,101 @@
+<div class="card m-5 py-5" style="width: 50rem">
+  <div class="col-md-12">
+    <p class="h5">
+      Two-Way data Binding, Class Binding, Style Binding and Event Binding.
+    </p>
+  </div>
+  <div class="card-body text-start">
+    <div>
+      <h5 class="card-title">1. Select</h5>
+      <select class="form-select" aria-label="Default select example" (change)="selectChangeHandler($event)">
+        <option selected>Open this select menu</option>
+        <option value="rectangle">RED RECTANGLE</option>
+        <option value="circle">BLUE CIRCLE</option>
+        <option value="elipse">GREEN ECLIPSE</option>
+        <option value="parallelogram">LIGHT BULE PARALELLOGRAM</option>
+        <option value="triangle">YELLOW TRIANGLE</option>
+      </select>
+      <br />
+      <div [class]="myclass"></div>
+    </div>
+    <hr />
+
+    <div>
+      <h5 class="card-title">2. Case</h5>
+      <div class="form-check">
+        <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1" value="uppercase"
+          (change)="selectChangeEvent($event)" />
+        <label class="form-check-label" for="flexRadioDefault1">
+          UpperCase
+        </label>
+      </div>
+      <div class="form-check">
+        <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2" value="lowercase"
+          (change)="selectChangeEvent($event)" />
+        <label class="form-check-label" for="flexRadioDefault2">
+          LowerCase
+        </label>
+      </div>
+      <span class="display-6 text-primary" [style.textTransform]="mystyle">HeLlo WoRlD!</span>
+    </div>
+    <hr />
+
+    <div (keyup)="(0)">
+      <h5 class="card-title">3. Message</h5>
+      <label class="h5 mx-1">Type something:</label><br />
+      <input #anyInput class="form-control w-50" /> &nbsp;
+      <span class="h5 text-success">{{ anyInput.value }}</span>
+    </div>
+    <hr />
+
+    <div>
+      <h5 class="card-title">4. Text</h5>
+      <input [value]="currentItem.name" (input)="currentItem.name = getValue($event)" class="form-control w-50 h5" />
+      <span class="h5 text-info">Result: {{ currentItem.name }}</span>
+    </div>
+    <hr />
+
+    <div>
+      <h5 class="card-title">5. Size</h5>
+      <button class="btn btn-primary py-2 m-2" (click)="dec()" title="smaller">
+        Size(-)
+      </button>
+      <button class="btn btn-primary py-2 m-2" (click)="inc()" title="bigger">
+        Size(+)
+      </button>
+      <label [style.font-size.px]="fontSizePx" class="display-6">FontSize: {{ fontSizePx }}px</label>
+    </div>
+    <hr />
+
+    <div class="col-md-12 text-center">
+      <img [src]="image" class="w-50" />
+    </div>
+    <br>
+    <div class="card-body text-center">
+      <h5 class="card-title">Product Title 1:</h5>
+      <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad totam debitis voluptates
+        nam.
+        Reprehenderit, corrupti. Necessitatibus aspernatur excepturi iste, ratione facere molestias cupiditate
+        repudiandae dolorum!</p>
+      <div class="row w-100 d-flex m-5 text-center">
+        <button class="btn card rounded-circle m-1" style="height: 30px; width: 30px; background-color: palegoldenrod"
+          (click)="gold()"></button>
+        <button class="btn card m-1 rounded-circle" style="height: 30px; width: 30px; background-color: silver"
+          (click)="silver()"></button>
+        <button class="btn card m-1 rounded-circle" style="height: 30px; width: 30px; background-color: darkslategrey"
+          (click)="midnight()"></button>
+        <button class="btn card m-1 rounded-circle" style="height: 30px; width: 30px; background-color: grey"
+          (click)="spacegrey()"></button>
+      </div>
+
+      <div class="row d-flex">
+        <button class="btn btn-primary py-2 m-2" (myClick)="clickMessage=$event" clickable>Add to Cart</button>
+        <button (click)="onSave($event)" class="btn btn-primary py-2 m-2">Buy Product1</button>
+      </div>
+    </div>
+    <div class="row text-center">
+      <h1 class="display-5">{{clickMessage}}</h1>
+    </div>
+
+  </div>
+</div>

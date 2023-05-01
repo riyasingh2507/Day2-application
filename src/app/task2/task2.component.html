@@ -1,0 +1,92 @@
+<div class="row d-flex">
+    <div class="card m-5 py-5" style="width: 20rem;">
+        <div class="col-md-12">
+            <img [src]="image" class="w-100" />
+        </div>
+        <div class="card-body text-center">
+            <h5 class="card-title">Product Title 1:</h5>
+            <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad totam debitis voluptates
+                nam.
+                Reprehenderit, corrupti. Necessitatibus aspernatur excepturi iste, ratione facere molestias cupiditate
+                repudiandae dolorum!</p>
+            <div class="row w-100 d-flex m-5">
+                <button class="btn card rounded-circle m-1"
+                    style="height: 30px; width: 30px; background-color: palegoldenrod" (click)="gold()"></button>
+                <button class="btn card m-1 rounded-circle" style="height: 30px; width: 30px; background-color: silver"
+                    (click)="silver()"></button>
+                <button class="btn card m-1 rounded-circle"
+                    style="height: 30px; width: 30px; background-color: darkslategrey" (click)="midnight()"></button>
+                <button class="btn card m-1 rounded-circle" style="height: 30px; width: 30px; background-color: grey"
+                    (click)="spacegrey()"></button>
+            </div>
+
+            <div class="row d-flex">
+                <button class="btn btn-primary py-2 m-2" (myClick)="clickMessage=$event" clickable>Add to Cart</button>
+                <button (click)="onSave($event)" class="btn btn-primary py-2 m-2">Buy Product1</button>
+            </div>
+        </div>
+    </div>
+
+    <div class="card m-5 py-5" style="width: 18rem;">
+        <div class="col-md-12">
+            <img [src]="image1" class="w-100" />
+        </div>
+        <div class="card-body text-center">
+            <h5 class="card-title">Product Title 2:</h5>
+            <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad totam debitis voluptates
+                nam.
+                Reprehenderit, corrupti. Necessitatibus aspernatur excepturi iste, ratione facere molestias cupiditate
+                repudiandae dolorum!</p>
+            <div class="row w-100 d-flex m-5">
+                <button class="btn card rounded-circle m-1"
+                    style="height: 30px; width: 30px; background-color: palegoldenrod" (click)="ipadgold()"></button>
+                <button class="btn card m-1 rounded-circle" style="height: 30px; width: 30px; background-color: silver"
+                    (click)="ipadsilver()"></button>
+                <button class="btn card m-1 rounded-circle"
+                    style="height: 30px; width: 30px; background-color: darkslategrey"
+                    (click)="ipadmidnight()"></button>
+                <button class="btn card m-1 rounded-circle" style="height: 30px; width: 30px; background-color: grey"
+                    (click)="ipadspacegrey()"></button>
+            </div>
+
+            <div class="row d-flex">
+                <button class="btn btn-primary py-2 m-2" (myClick)="clickMessage=$event" clickable>Add to Cart</button>
+                <button (click)="onSave($event)" class="btn btn-primary py-2 m-2">Buy Product2</button>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="card m-5 py-5" style="width: 18rem;">
+        <div class="col-md-12">
+            <img [src]="image2" class="w-100" />
+        </div>
+        <div class="card-body text-center">
+            <h5 class="card-title">Product Title 3:</h5>
+            <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad totam debitis voluptates
+                nam.
+                Reprehenderit, corrupti. Necessitatibus aspernatur excepturi iste, ratione facere molestias cupiditate
+                repudiandae dolorum!</p>
+            <div class="row w-100 d-flex m-5">
+                <button class="btn card rounded-circle m-1"
+                    style="height: 30px; width: 30px; background-color: palegoldenrod" (click)="macgold()"></button>
+                <button class="btn card m-1 rounded-circle" style="height: 30px; width: 30px; background-color: silver"
+                    (click)="macsilver()"></button>
+                <button class="btn card m-1 rounded-circle"
+                    style="height: 30px; width: 30px; background-color: darkslategrey" (click)="macmidnight()"></button>
+                <button class="btn card m-1 rounded-circle" style="height: 30px; width: 30px; background-color: grey"
+                    (click)="macspacegrey()"></button>
+            </div>
+
+            <div class="row d-flex">
+                <button class="btn btn-primary py-2 m-2" (myClick)="clickMessage=$event" clickable>Add to Cart</button>
+                <button (click)="onSave($event)" class="btn btn-primary py-2 m-2" >Buy Product3</button>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+<div class="row text-center">
+    <h1 class="display-5">{{clickMessage}}</h1>
+</div>

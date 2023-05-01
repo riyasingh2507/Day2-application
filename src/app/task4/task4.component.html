@@ -1,0 +1,38 @@
+<div class="card m-5 py-5" style="width: 50rem;">
+    <div class="col-md-12">
+        <p class="h5">Class binding and Style Binding.</p>
+    </div>
+    <div class="card-body text-start">
+        <div>
+            <h5 class="card-title">1. Select</h5>
+            <select class="form-select" aria-label="Default select example" (change)="selectChangeHandler($event)">
+                <option selected>Open this select menu</option>
+                <option value="rectangle">RED RECTANGLE</option>
+                <option value="circle">BLUE CIRCLE</option>
+                <option value="elipse">GREEN ECLIPSE</option>
+                <option value="parallelogram">LIGHT BULE PARALELLOGRAM</option>
+                <option value="triangle">YELLOW TRIANGLE</option>
+            </select>
+            <br>
+            <div [class]="myclass"></div>
+        </div>
+        <hr />
+
+        <div>
+            <h5 class="card-title">2. Case</h5>
+            <div class="form-check">
+                <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1" value="uppercase" (change)="selectChangeEvent($event)">
+                <label class="form-check-label" for="flexRadioDefault1">
+                    UpperCase
+                </label>
+            </div>
+            <div class="form-check">
+                <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2" value="lowercase" (change)="selectChangeEvent($event)">
+                <label class="form-check-label" for="flexRadioDefault2">
+                    LowerCase
+                </label>
+            </div>
+            <span class="display-6 text-primary" [style.textTransform]="mystyle">HeLlo WoRlD!</span>
+        </div>
+    </div>
+</div>

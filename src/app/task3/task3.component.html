@@ -1,0 +1,29 @@
+<div class="card m-5 py-5" style="width: 50rem;">
+    <div class="col-md-12">
+        <p class="h5">Two way Data Binding</p>
+    </div>
+    <div class="card-body text-start">
+        <div (keyup)="0">
+            <h5 class="card-title">1. Message</h5>
+            <label class="h5 mx-1">Type something:</label><br>
+            <input #anyInput class="form-control w-50 "> &nbsp;
+            <span class="h5 text-success">{{anyInput.value}}</span>
+        </div>
+        <hr />
+
+        <div>
+            <h5 class="card-title">2. Text</h5>
+            <input [(ngModel)]="currentItem" class="form-control w-50 h5">
+            <span class="h5 text-info">Result: {{currentItem}}</span>
+        </div>
+        <hr />
+
+        <div>
+            <h5 class="card-title">3. Size</h5>
+            <button class="btn btn-primary py-2 m-2" (click)="dec()" title="smaller">Size(-)</button>
+            <button class="btn btn-primary py-2 m-2" (click)="inc()" title="bigger">Size(+)</button>
+            <label [style.font-size.px]="fontSizePx" class="display-6">FontSize: {{fontSizePx}}px</label>
+        </div>
+        <hr />
+    </div>
+</div>

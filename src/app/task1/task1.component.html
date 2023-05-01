@@ -1,0 +1,40 @@
+<div class="col-md-12">
+    <h1 class="h1">Interpolation Binding and Property Binding</h1>
+    <hr />
+    <h2 class="h2">Interpolation</h2>
+    <h3 class="h3">Current name: {{ currentName }}</h3>
+    <p class="h4">Current Title:</p>
+    <p class="display-6">{{title}}</p>
+    <div class="w-100"><img src="{{itemImageUrl}}" class="rounded"></div>
+
+    <h3 class="h3">Evaluating template expressions </h3>
+    <h4 class="h4">Simple evaluation (to a string):</h4>
+    <p>The sum of 1 + 1 is {{1 + 1}}.</p>
+
+    <h4 class="h4">Evaluates using a method (also evaluates to a string):</h4>
+    <p>The sum of 1 + 1 is not {{1 + 1 + getVal()}}.</p>
+
+
+    <hr />
+
+    <h2 class="h2">Expression</h2>
+    <div>
+        <h3>Component context, properties of app.component.ts:</h3>
+        <h4>{{recommended}}</h4>
+        <img [src]="itemImageUrl2" class="rounded">
+    </div>
+
+    <div>
+        <h4 class="h4">Template context, template input variables (let Names):</h4>
+        <ul >
+            <li  *ngFor="let customer of customers" class="h5">{{customer.name}}</li>
+        </ul>
+    </div>
+
+    <div (keyup)="0">
+        <h4 class="h4">Template context: template reference variables (#anyInput):</h4>
+        <label class="h5">Type something:
+            <input #anyInput> &nbsp;{{anyInput.value}}
+        </label>
+    </div>
+</div>

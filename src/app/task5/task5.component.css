@@ -1,0 +1,38 @@
+.square {
+  width: 80px;
+  height: 80px;
+  background: rgb(49, 47, 47);
+}
+.rectangle {
+  width: 200px;
+  height: 80px;
+  background: red;
+}
+.circle {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  background: blue;
+}
+.elipse {
+  width: 160px;
+  height: 80px;
+  border-radius: 50%;
+  background: green;
+}
+.parallelogram {
+  width: 160px;
+  height: 80px;
+  transform: skew(20deg);
+  background: rgb(17, 169, 219);
+}
+.triangle {
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 0 50px 86.6px 50px;
+  border-color: transparent transparent orange transparent;
+
+}
+
+
